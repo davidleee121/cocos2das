@@ -1,4 +1,4 @@
-package com.virtuos.cocos2dflash.util
+package com.virtuos.cocos2das.util
 {
 	/**
 	 * Thrown to indicate that a method has been passed an illegal or

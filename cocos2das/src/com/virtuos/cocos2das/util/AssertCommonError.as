@@ -1,4 +1,4 @@
-package com.virtuos.cocos2dflash.util
+package com.virtuos.cocos2das.util
 {
 	/**
 	 * Throws to indicate a common error occured, used to port assert keyword in C++

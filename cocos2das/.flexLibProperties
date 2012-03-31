@@ -2,8 +2,6 @@
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="com.virtuos.cocos2dflash.base.CCObject"/>
-    <classEntry path="com.virtuos.cocos2dflash.base.CCCopying"/>
-    <classEntry path="com.virtuos.cocos2dflash.util.Assert"/>
     <classEntry path="com.virtuos.cocos2dflash.util.AssertCommonError"/>
     <classEntry path="com.virtuos.cocos2dflash.base.CCNode"/>
   </includeClasses>

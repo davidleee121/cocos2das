@@ -1,6 +1,6 @@
-package com.virtuos.cocos2dflash.base
+package com.virtuos.cocos2das.base
 {
-	import com.virtuos.cocos2dflash.util.Assert;
+	import com.virtuos.cocos2das.util.Assert;
 	
 	public class CCObject implements CCCopying
 	{

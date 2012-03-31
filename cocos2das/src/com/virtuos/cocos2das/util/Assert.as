@@ -1,4 +1,4 @@
-package com.virtuos.cocos2dflash.util
+package com.virtuos.cocos2das.util
 {
 	public class Assert
 	{

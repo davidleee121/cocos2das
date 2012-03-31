@@ -1,4 +1,4 @@
-package com.virtuos.cocos2dflash.base
+package com.virtuos.cocos2das.base
 {
 	public class CCNode extends CCObject implements SelectorProtocol
 	{
