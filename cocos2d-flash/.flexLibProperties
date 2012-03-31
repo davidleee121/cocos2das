@@ -5,6 +5,7 @@
     <classEntry path="com.virtuos.cocos2dflash.base.CCCopying"/>
     <classEntry path="com.virtuos.cocos2dflash.util.Assert"/>
     <classEntry path="com.virtuos.cocos2dflash.util.AssertCommonError"/>
+    <classEntry path="com.virtuos.cocos2dflash.base.CCNode"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
