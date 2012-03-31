@@ -26,5 +26,7 @@ package com.virtuos.cocos2dflash.base
 				return ((point1.x == point2.x) && (point1.y == point2.y));
 			}
 		}
+		
+		public static const CCPointZero : CCPoint = new CCPoint(0, 0);
 	}
 }

@@ -26,6 +26,8 @@ package com.virtuos.cocos2dflash.base
 				return ((size1.width == size2.width) && (size1.height == size2.height));
 			}
 		}
+		
+		public static const CCSizeZero : CCSize = new CCSize(0, 0);
 	}
 }
 
