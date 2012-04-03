@@ -1,6 +1,7 @@
 package com.virtuos.cocos2das
 {
 	import com.virtuos.cocos2das.base.CCObject;
+	import com.virtuos.cocos2das.util.Assert;
 	
 	import flash.geom.Matrix3D;
 	import flash.geom.Vector3D;
@@ -113,7 +114,7 @@ package com.virtuos.cocos2das
 			return Number.MIN_VALUE;
 		}
 		
-		void function setEyeXYZ(fEyeX : Number, fEyeY : Number, fEyeZ : Number) : void
+		public function setEyeXYZ(fEyeX : Number, fEyeY : Number, fEyeZ : Number) : void
 		{
 			m_fEyeX = fEyeX * CCDirector.sharedDirector().ContentScaleFactor;
 			m_fEyeY = fEyeY * CCDirector.sharedDirector().ContentScaleFactor;
@@ -122,6 +123,42 @@ package com.virtuos.cocos2das
 			m_bDirty = true;
 		}
 		
+		public function setCenterXYZ(fCenterX : Number, fCenterY : Number, fCenterZ : Number) : void
+		{
+			m_fCenterX = fCenterX * CCDirector.sharedDirector().ContentScaleFactor;
+			m_fCenterY = fCenterY * CCDirector.sharedDirector().ContentScaleFactor;
+			m_fCenterZ = fCenterZ * CCDirector.sharedDirector().ContentScaleFactor;
+			
+			m_bDirty = true;
+		}
 		
+		public function setUpXYZ(fUpX : Number, fUpY : Number, fUpZ : Number)
+		{
+			m_fUpX = fUpX;
+			m_fUpY = fUpY;
+			m_fUpZ = fUpZ;
+			
+			m_bDirty = true;
+		}
+		
+		// action script do not have ref keyword like in C#, how can I port the remaining functions?
+		// currently I use container class
+		public function getEyeXYZ(outValue : Vector3D) : void
+		{
+			Assert.assertCommon(outValue != null, "[getEyeXYZ] the passed in outValue can't be null");
+			outValue.setTo(m_fEyeX, m_fEyeY, m_fEyeZ);	
+		}
+		
+		public function getCenterXYZ(outValue : Vector3D) : void
+		{
+			Assert.assertCommon(outValue != null, "[getEyeXYZ] the passed in outValue can't be null");
+			outValue.setTo(m_fCenterX, m_fCenterY, m_fCenterZ);
+		}
+		
+		public function getUpXYZ(outValue : Vector3D) : void
+		{
+			Assert.assertCommon(outValue != null, "[getEyeXYZ] the passed in outValue can't be null");
+			outValue.setTo(m_fUpX, m_fUpY, m_fUpZ);
+		}
 	}
 }
