@@ -99,6 +99,35 @@ package com.virtuos.cocos2das.base
 		
 		protected var m_fSkewX : Number;
 		
+		public function get SkewX() : Number
+		{
+			return m_fSkewX;
+		}
+		
+		public function set SkewX(value : Number) : void
+		{
+			m_fSkewX = value;
+		}
+		
+		protected var m_fSkewY : Number;
+		
+		public function get SkewY() : Number
+		{
+			return m_fSkewY;
+		}
+		
+		public function set SkewY(value : Number) : void
+		{
+			m_fSkewY = value;
+		}
+		
+		protected var m_pChildren : Vector.<CCObject> = Vector.<CCObject>([]);
+		
+		public function get Children() : Vector.<CCObject>
+		{
+			return m_pChildren;
+		}
+		
 		
 		
 		public function CCNode()
