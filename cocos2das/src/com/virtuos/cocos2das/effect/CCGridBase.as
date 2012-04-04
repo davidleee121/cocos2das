@@ -1,7 +1,10 @@
 package com.virtuos.cocos2das.effect
 {
+	import com.virtuos.cocos2das.base.CCNode;
 	import com.virtuos.cocos2das.base.CCObject;
 	import com.virtuos.cocos2das.base.CCPoint;
+	import com.virtuos.cocos2das.managers.Stage3DProxy;
+	import com.virtuos.cocos2das.util.Assert;
 	
 	public class CCGridBase extends CCObject
 	{
@@ -135,7 +138,48 @@ package com.virtuos.cocos2das.effect
 		public function beforeDraw() : void
 		{
 			set2DProjection();
-			m_pGrabber->beforeRender(m_pTexture);
+			m_pGrabber.beforeRender(m_pTexture);
+		}
+		
+		public function afterDraw(pTarget : CCNode) : void
+		{
+			var stage3DProxy : Stage3DProxy = CCDirector.sharedDirector().Stage3DProxy;
+			
+			m_pGrabber.afterRender(m_pTexture);
+			
+			set3DProjection();
+			applyLandscape();
+			
+			if (pTarget.getCamera().getDirty())
+			{
+				CCPoint offset = pTarget.getAnchorPointInPixels();
+				
+				// todo: port the following logic using Context3D
+				//ccglTranslate(offset.x, offset.y, 0);
+				//pTarget->getCamera()->locate();
+				//ccglTranslate(-offset.x, -offset.y, 0);
+			}
+			
+			stage3DProxy.setTextureAt(0, m_pTexture);	
+			
+			CCDirector.sharedDirector().setProjection(CCDirector.sharedDirector().getProjection());
+			CCDirector.sharedDirector().applyOrientation();
+			blit();
+		}
+		
+		public function blit() : void
+		{
+			Assert.assertCommon(false);
+		}
+		
+		public function reuse() : void
+		{
+			Assert.assertCommon(false);
+		}
+		
+		public function calculateVertexPoints() : void
+		{
+			Assert.assertCommon(false);
 		}
 		
 		
