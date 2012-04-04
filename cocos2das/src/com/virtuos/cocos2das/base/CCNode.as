@@ -1,6 +1,7 @@
 package com.virtuos.cocos2das.base
 {
 	import com.virtuos.cocos2das.util.Assert;
+	import com.virtuos.cocos2das.CCCamera;
 	
 	public class CCNode extends CCObject implements SelectorProtocol
 	{
